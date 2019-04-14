@@ -1,0 +1,38 @@
+mapping:
+    Buchungstag: Date
+    Buchungstext: Type
+    Verwendungszweck: Purpose
+    Beguenstigter/Zahlungspflichtiger: Receiver
+    Betrag: Amount
+    Waehrung: Currency
+
+categories:
+  - title: Investments
+    rules:
+      - field: Type
+        input: WERTPAPIERE
+        exact: True
+  - title: Super Market
+    rules:
+      - field: Receiver
+        input: Rewe
+        exact: False
+      - field: Receiver
+        input: Basic AG
+        exact: False
+  - title: Eat / Drink Out
+    rules:
+      - field: Receiver
+        input: Restaurant
+        exact: False
+  - title: Utilities
+    rules:
+      - field: Receiver
+        input: Vodafone
+        exact: False
+      - field: Receiver
+        input: Vattenfall
+        exact: False
+      - field: Receiver
+        input: Daimler
+        exact: False
